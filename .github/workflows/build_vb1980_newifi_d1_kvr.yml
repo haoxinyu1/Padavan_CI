@@ -1,4 +1,4 @@
-name: Build K2P kvr from vb1980 kvr repo
+name: Build NEWIFI-D1 kvr from vb1980 kvr repo
 
 on:
   workflow_dispatch:

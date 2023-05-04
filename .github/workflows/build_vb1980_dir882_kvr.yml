@@ -1,4 +1,4 @@
-name: Build K2P kvr from vb1980 kvr repo
+name: Build DIR882 kvr from vb1980 kvr repo
 
 on:
   workflow_dispatch:
@@ -120,6 +120,9 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_IPT2SOCKS/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_MICROSOCKS/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENVPN/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSH/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_ARIA/d' .config
         #校园网相关开始
         sed -i '/CONFIG_FIRMWARE_INCLUDE_MENTOHUST/d' .config #删除配置项MENTOHUST
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT/d' .config #删除配置项SCUTCLIENT
